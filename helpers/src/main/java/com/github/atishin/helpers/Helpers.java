@@ -1,6 +1,8 @@
 package com.github.atishin.helpers;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -14,8 +16,8 @@ import com.mikepenz.iconics.typeface.FontAwesome;
  */
 public class Helpers {
 
-    public static Drawable getFontAwesomeIcon(Context context, FontAwesome.Icon icon) {
-        return new IconicsDrawable(context, icon).color(R.color.md_white_1000).actionBarSize();
+    public static Drawable getFontAwesomeIcon(Context context, FontAwesome.Icon icon, int color) {
+        return new IconicsDrawable(context, icon).color(color).actionBarSize();
     }
     public static boolean hasInternetConnection(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
